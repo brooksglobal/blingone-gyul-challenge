@@ -128,7 +128,7 @@ a{color:var(--ink);text-decoration-color:var(--pink);text-underline-offset:3px}
   <section id="lyrics">
     <div class="lbl"><b>00</b> · 가사와 뜻풀이</div>
     <h2>다 까먹어도 돼, 나만 까먹지 마</h2>
-    <p>곡의 모든 줄이 '까먹다'의 두 뜻, <b>귤을 까서 먹다</b>와 <b>잊어버리다</b>를 오가며 짜여 있습니다. 시간 단추를 누르면 위 전곡 플레이어가 그 부분부터 재생됩니다.</p>
+    <p>곡의 모든 줄이 '까먹다'의 두 뜻, <b>귤을 까서 먹다</b>와 <b>잊어버리다</b>를 오가며 짜여 있습니다. 시간 단추를 누르면 그 부분부터 노래가 나오니, 가사를 보면서 들으실 수 있습니다.</p>
     <div class="lyr">
       <div class="ly">
         <div><div class="part"><b>Intro</b><button class="seek" type="button" data-t="0" aria-label="Intro 부분부터 듣기">▶ 0:00</button></div>
@@ -475,7 +475,7 @@ a{color:var(--ink);text-decoration-color:var(--pink);text-underline-offset:3px}
   <footer>BLINGONE × 귤 · 까먹지 마 캠페인 제안 · 2026-11-23 · 영상은 AI 동작 시안, 노래는 가이드 데모입니다.</footer>
 </div>
 <script>
-document.querySelectorAll('.seek').forEach(function(b){b.addEventListener('click',function(){var a=document.getElementById('fullsong');if(!a)return;var t=parseFloat(b.dataset.t)||0;var go=function(){try{a.currentTime=t}catch(e){}a.play();};if(a.readyState>=1){go()}else{a.preload='auto';a.addEventListener('loadedmetadata',go,{once:true});a.load();}a.scrollIntoView({behavior:'smooth',block:'center'});});});
+document.querySelectorAll('.seek').forEach(function(b){b.addEventListener('click',function(){var a=document.getElementById('fullsong');if(!a)return;var t=parseFloat(b.dataset.t)||0;var go=function(){try{a.currentTime=t}catch(e){}a.play();};if(a.readyState>=1){go()}else{a.preload='auto';a.addEventListener('loadedmetadata',go,{once:true});a.load();}});});
 </script>
 </body>
 </html>
