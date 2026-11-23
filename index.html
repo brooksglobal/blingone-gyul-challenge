@@ -88,6 +88,23 @@ table.flow th:first-child{width:110px}
 table.flow td{font-size:13.5px;line-height:1.55}
 table.flow td.st{font-weight:700;color:var(--ink);white-space:nowrap}
 table.flow td.st small{display:block;font:500 10.5px/1.4 var(--f-mono);color:var(--mute);font-weight:400}
+.lyr{display:grid;gap:0;margin-top:14px}
+.ly{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:22px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.ly:last-child{border-bottom:0}
+@media (max-width:640px){.ly{grid-template-columns:1fr;gap:8px}}
+.ly .part{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.ly .part b{font:500 11px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.seek{font:500 11px/1 var(--f-mono);letter-spacing:.06em;color:var(--pink);background:none;border:1px solid var(--pink);padding:5px 7px;cursor:pointer}
+.seek:hover{background:var(--pink);color:var(--stage)}
+.ly .lines{font:500 17px/1.75 var(--f-body)}
+.ly .lines i{font-style:normal;color:var(--pink);font-weight:700}
+.ly .lines small{display:block;font:500 11px/1.5 var(--f-mono);color:var(--mute);margin-top:4px}
+.ly .mean{font-size:14.5px;line-height:1.7}
+.ly .mean p{margin:0 0 8px}
+.dbl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:12px 0 6px}
+.dbl div{background:var(--panel);padding:14px 16px;min-width:0}
+.dbl .v{font:700 22px/1.2 var(--f-disp);color:var(--pink);margin-bottom:4px}
+@media (max-width:560px){.dbl{grid-template-columns:1fr}}
 footer{margin-top:60px;color:var(--mute);font-size:13px}
 a{color:var(--ink);text-decoration-color:var(--pink);text-underline-offset:3px}
 </style>
@@ -100,13 +117,62 @@ a{color:var(--ink);text-decoration-color:var(--pink);text-underline-offset:3px}
     <div>
       <h1>까먹지<br><span>마</span></h1>
       <p class="lead">따라 추다 보면 귤 하나를 다 먹는 챌린지. 블링원 귤 시즌의 첫 곡 '까먹지 마'를 틱톡·릴스 챌린지로 퍼뜨리는 계획입니다.</p>
-      <div class="player"><div class="t">까먹지 마 · 전곡 <small>가이드 데모 2:31</small></div><audio controls preload="none" src="assets/song_full.m4a"></audio></div>
+      <div class="player"><div class="t">까먹지 마 · 전곡 <small>가이드 데모 2:31</small></div><audio id="fullsong" controls preload="none" src="assets/song_full.m4a"></audio></div>
       <div class="player"><div class="t">챌린지 사운드 · 후렴 <small>15.7초</small></div><audio controls preload="none" src="assets/song_challenge.m4a"></audio></div>
     </div>
     <figure style="margin:0"><video src="assets/cd_spin.mp4" poster="assets/jacket.jpg" autoplay muted loop playsinline preload="auto" aria-label="귤이 가득 찬 CD 모양 앨범 재킷이 천천히 돌아가는 시안. BLINGONE이 아치형 투명 엠보로 새겨져 있음" style="display:block;width:100%;height:auto"></video><figcaption class="note" style="margin-top:8px">디지털 싱글 재킷 시안 · 귤이 가득 찬 CD, 'BLINGONE'만 투명한 엠보로</figcaption></figure>
   </div>
   <p class="note">노래는 방향을 보여 드리기 위한 가이드 데모입니다. 정식 음원은 작곡·작사가와 멤버 녹음으로 새로 만듭니다.</p>
 
+
+  <section id="lyrics">
+    <div class="lbl"><b>00</b> · 가사와 뜻풀이</div>
+    <h2>다 까먹어도 돼, 나만 까먹지 마</h2>
+    <p>곡의 모든 줄이 '까먹다'의 두 뜻, <b>귤을 까서 먹다</b>와 <b>잊어버리다</b>를 오가며 짜여 있습니다. 시간 단추를 누르면 위 전곡 플레이어가 그 부분부터 재생됩니다.</p>
+    <div class="lyr">
+      <div class="ly">
+        <div><div class="part"><b>Intro</b><button class="seek" type="button" data-t="0" aria-label="Intro 부분부터 듣기">▶ 0:00</button></div>
+          <div class="lines"><i>톡! 쓱! 똑! 냠!</i><br>까먹지 마</div></div>
+        <div class="mean"><p>곡의 첫 소리가 곧 챌린지 신호입니다. 귤을 <b>톡</b> 누르고, 껍질을 <b>쓱</b> 벗기고, 한 조각 <b>똑</b> 떼서, <b>냠</b> 먹는 소리입니다.</p><p>사운드를 틀자마자 무엇을 할지 바로 알 수 있게, 설명 없이 소리만으로 시작합니다.</p></div>
+      </div>
+      <div class="ly">
+        <div><div class="part"><b>Verse 1</b><button class="seek" type="button" data-t="7.6" aria-label="Verse 1 부분부터 듣기">▶ 0:08</button></div>
+          <div class="lines">답장은 세 시간째 읽씹<br>내 생일도 또 까먹고<br>근데 귤은 벌써 다섯 개째<br>손끝만 노랗게 물들었네<br>Hello, 나 여기 있어<br>이불 속 네 옆자리<br>귤껍질 산 옆에<br>Still waiting, still waiting</div></div>
+        <div class="mean"><p>나를 자꾸 잊어버리는 상대 이야기입니다. 답장도, 생일도 까먹으면서 <b>귤만은 다섯 개째 까먹고</b> 있습니다.</p><p>'노랗게 물든 손끝'은 겨울에 귤을 많이 먹으면 누구나 겪는 장면입니다. 이 손끝이 곡 끝까지 이어지는 상징이 되고, 챌린지 마지막에 카메라에 보여 주는 동작이 됩니다.</p><p>'이불 속, 귤껍질 산'으로 캠페인 전체의 무대인 <b>겨울밤 이불 속</b>을 그립니다.</p></div>
+      </div>
+      <div class="ly">
+        <div><div class="part"><b>Pre-Chorus</b><button class="seek" type="button" data-t="22.4" aria-label="Pre-Chorus 부분부터 듣기">▶ 0:22</button></div>
+          <div class="lines">딱 하나만 기억해<br>껍질 속에 숨긴 거<br>한 겹 두 겹 열어 보면<br>It's me, it's me</div></div>
+        <div class="mean"><p>껍질을 한 겹씩 까면 그 안에 있는 건 '나'라는 고백입니다. <b>귤을 까는 동작이 곧 나를 발견하는 일</b>이 되도록 엮었습니다.</p><p>팬이 귤을 깔 때마다 블링원을 떠올리게 하려는 장치입니다.</p></div>
+      </div>
+      <div class="ly">
+        <div><div class="part"><b>Chorus</b><button class="seek" type="button" data-t="30" aria-label="Chorus 부분부터 듣기">▶ 0:30</button></div>
+          <div class="lines">약속은 까먹고 <i>(톡)</i><br>귤은 잘 까먹고 <i>(쓱)</i><br>내 이름 까먹고 <i>(똑)</i><br>또 하나 까먹고 <i>(냠)</i><br>다 까먹어도 돼<br>나만 까먹지 마<br>Don't forget, don't forget<br>까먹지 마<small>1:21 · 2:00에 다시 나옵니다. 마지막은 키를 올려 더 크게</small></div></div>
+        <div class="mean"><p>'까먹다'의 두 뜻을 한 줄씩 번갈아 씁니다.</p><div class="dbl"><div><div class="v">잊어버리다</div>약속은 까먹고 · 내 이름 까먹고</div><div><div class="v">까서 먹다</div>귤은 잘 까먹고 · 또 하나 까먹고</div></div><p>그리고 '다 까먹어도 돼, <b>나만 까먹지 마</b>'로 두 뜻을 하나로 묶습니다. 블링원이 팬에게 하는 말이자, 곡 제목이자, 챌린지 이름입니다.</p><p>줄 끝 괄호의 (톡)(쓱)(똑)(냠)이 넷째 박에 들어가는 받는 소리이고, 여기에 귤 동작을 맞춥니다. 이 후렴 15초가 그대로 챌린지 사운드입니다. 'Don't forget'은 해외 팬도 따라 부를 수 있게 넣은 영어 한 줄입니다.</p></div>
+      </div>
+      <div class="ly">
+        <div><div class="part"><b>Post-Chorus</b><button class="seek" type="button" data-t="45" aria-label="Post-Chorus 부분부터 듣기">▶ 0:45</button></div>
+          <div class="lines"><i>톡! 쓱! 똑! 냠!</i> × 3<br>까먹지 마<small>1:37에 다시 나오고, 2:16부터 마지막으로 한 번 더</small></div></div>
+        <div class="mean"><p>구호만 되풀이하는 구간입니다. 공연에서 관객이 함께 외치는 <b>떼창 자리</b>입니다.</p></div>
+      </div>
+      <div class="ly">
+        <div><div class="part"><b>Hook</b><button class="seek" type="button" data-t="61" aria-label="Hook 부분부터 듣기">▶ 1:01</button></div>
+          <div class="lines"><i>톡! 쓱! 똑! 냠!</i> × 2<br>누르고 벗기고<br>떼어서 냠<br><i>톡! 쓱! 똑! 냠!</i><br>까먹지 마</div></div>
+        <div class="mean"><p>'톡 쓱 똑 냠'이 무슨 뜻인지 가사가 직접 풀어 줍니다. <b>누르고(톡), 벗기고(쓱), 떼어서(똑), 냠</b>. 노래가 곧 동작 설명서입니다.</p><p>처음 듣는 사람도 이 부분만 들으면 따라 할 수 있어서, 챌린지 2탄(따라 하기 설명 영상) 사운드로 씁니다.</p></div>
+      </div>
+      <div class="ly">
+        <div><div class="part"><b>Bridge</b><button class="seek" type="button" data-t="105" aria-label="Bridge 부분부터 듣기">▶ 1:45</button></div>
+          <div class="lines">겨울이 다 가고<br>귤 상자가 비어도<br>노란 손끝처럼<br>나 남아 있을게</div></div>
+        <div class="mean"><p>귤 철이 끝나도, 노랗게 물든 손끝이 며칠은 남아 있듯 <b>나도 네 곁에 남아 있겠다</b>는 약속입니다.</p><p>이 곡이 한겨울 한 번으로 끝나지 않고 귤 농장·다음 겨울로 이어진다는 캠페인의 뜻을 담았습니다. 이어지는 댄스 브레이크는 공연용 안무 구간입니다.</p></div>
+      </div>
+      <div class="ly">
+        <div><div class="part"><b>마지막 구호 · Outro</b><button class="seek" type="button" data-t="136" aria-label="Outro 부분부터 듣기">▶ 2:16</button></div>
+          <div class="lines">톡 쓱 똑 냠<br>까먹지 마</div></div>
+        <div class="mean"><p>마지막 구호를 크게 외친 뒤, 처음의 외침을 속삭임으로 바꿔, 귓가에 남기고 끝냅니다. 공연 엔딩과 QR 음원도 이 부분으로 닫습니다.</p></div>
+      </div>
+    </div>
+    <p class="note">가이드 데모의 가사입니다. 정식 작사 때 다듬을 수 있고, 후렴 구조를 바꾸면 안무도 함께 고칩니다.</p>
+  </section>
 
   <section id="challenge">
     <div class="lbl"><b>01</b> · 챌린지</div>
@@ -408,5 +474,8 @@ a{color:var(--ink);text-decoration-color:var(--pink);text-underline-offset:3px}
 
   <footer>BLINGONE × 귤 · 까먹지 마 캠페인 제안 · 2026-11-23 · 영상은 AI 동작 시안, 노래는 가이드 데모입니다.</footer>
 </div>
+<script>
+document.querySelectorAll('.seek').forEach(function(b){b.addEventListener('click',function(){var a=document.getElementById('fullsong');if(!a)return;var t=parseFloat(b.dataset.t)||0;var go=function(){try{a.currentTime=t}catch(e){}a.play();};if(a.readyState>=1){go()}else{a.preload='auto';a.addEventListener('loadedmetadata',go,{once:true});a.load();}a.scrollIntoView({behavior:'smooth',block:'center'});});});
+</script>
 </body>
 </html>
