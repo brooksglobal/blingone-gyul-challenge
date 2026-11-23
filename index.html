@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>까먹지 마 · BLINGONE 귤 챌린지</title>
+<meta name="description" content="따라 추다 보면 귤 하나를 다 먹는 챌린지. 블링원 디지털 싱글 '까먹지 마' 캠페인 제안">
+<meta property="og:title" content="까먹지 마 · BLINGONE 귤 챌린지">
+<meta property="og:description" content="따라 추다 보면 귤 하나를 다 먹는 챌린지. 디지털 싱글 '까먹지 마' 캠페인 제안">
+<meta property="og:image" content="https://brooksglobal.github.io/blingone-gyul-challenge/assets/og.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+:root{
+  --stage:#0E0C0D; --panel:#17141A; --line:#2B2630; --ink:#F2EEF0; --mute:#A69DA6; --pink:#F15D95;
+  --f-disp:"Antonio","Noto Sans KR",Impact,sans-serif;
+  --f-body:"Noto Sans KR","Apple SD Gothic Neo",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--stage);color:var(--ink);font:400 15.5px/1.75 var(--f-body);word-break:keep-all;overflow-wrap:break-word}
+.wrap{max-width:880px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 90px max(16px,env(safe-area-inset-left,0px))}
+.lbl{font:500 11.5px/1.4 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.lbl b{color:var(--pink);font-weight:500}
+h1{font:700 clamp(52px,11vw,110px)/.95 var(--f-disp);margin:14px 0 18px;letter-spacing:-.01em}
+h1 span{color:var(--pink)}
+h2{font:700 clamp(28px,5vw,40px)/1.1 var(--f-disp);margin:6px 0 16px;text-wrap:balance}
+h3{font:700 17px/1.4 var(--f-body);margin:22px 0 6px}
+p{margin:0 0 12px;max-width:68ch}
+.lead{font-size:18px;max-width:58ch}
+section{border-top:1px solid var(--line);padding-top:34px;margin-top:48px}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:32px;align-items:center}
+.hero img{width:100%;height:auto;display:block}
+@media (max-width:720px){.hero{grid-template-columns:1fr}}
+.player{background:var(--panel);border:1px solid var(--line);padding:14px 16px;margin:12px 0}
+.player .t{font:700 15px/1.4 var(--f-body);margin-bottom:6px}
+.player .t small{font:500 11px/1.4 var(--f-mono);color:var(--mute);letter-spacing:.08em;margin-left:6px}
+audio{width:100%;display:block}
+.feature{max-width:380px;margin:16px auto 6px}
+.feature video{width:100%;aspect-ratio:9/16;display:block;background:var(--panel);border:1px solid var(--line)}
+.moves{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0 6px}
+@media (max-width:620px){.moves{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.moves figure{margin:0;min-width:0}
+.moves video{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:var(--panel);border:1px solid var(--line)}
+.cue{font:700 26px/1 var(--f-disp);color:var(--pink);margin:8px 0 2px}
+.moves figcaption{font-size:13.5px;line-height:1.5}
+.note{color:var(--mute);font-size:13.5px}
+.tw{overflow-x:auto;margin:10px 0 14px}
+table{border-collapse:collapse;width:100%;min-width:600px;font-size:14.5px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font:500 11px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+td.k{color:var(--pink);font-weight:700;white-space:nowrap}
+ul,ol{padding-left:20px;margin:6px 0 12px}
+li{margin-bottom:7px}
+.call{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--pink);padding:20px 22px 8px;margin-top:18px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px 26px;margin-top:10px}
+.why div{min-width:0}
+.why .n{font:700 28px/1.1 var(--f-disp);color:var(--pink)}
+.step{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;padding:20px 0;border-bottom:1px dashed var(--line)}
+.step:last-child{border-bottom:0}
+.step .k{font:700 40px/1 var(--f-disp)}
+.step .k small{display:block;font:500 11px/1.5 var(--f-mono);letter-spacing:.1em;color:var(--mute);margin-top:8px}
+.step h3{margin-top:0}
+@media (max-width:560px){.step{grid-template-columns:1fr;gap:6px}.step .k{font-size:32px}}
+.todo li::marker{color:var(--pink)}
+footer{margin-top:60px;color:var(--mute);font-size:13px}
+a{color:var(--ink);text-decoration-color:var(--pink);text-underline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lbl"><b>BLINGONE</b> · 디지털 싱글 캠페인 제안 · 2026-11-23</div>
+  <div class="hero">
+    <div>
+      <h1>까먹지<br><span>마</span></h1>
+      <p class="lead">따라 추다 보면 귤 하나를 다 먹는 챌린지. 블링원 귤 시즌의 첫 곡 '까먹지 마'를 틱톡·릴스 챌린지로 퍼뜨리는 계획입니다.</p>
+      <div class="player"><div class="t">까먹지 마 · 전곡 <small>가이드 데모 2:31</small></div><audio controls preload="none" src="assets/song_full.m4a"></audio></div>
+      <div class="player"><div class="t">챌린지 사운드 · 후렴 <small>15.7초</small></div><audio controls preload="none" src="assets/song_challenge.m4a"></audio></div>
+    </div>
+    <figure style="margin:0"><img src="assets/jacket.jpg" alt="귤이 가득 찬 CD 모양 앨범 재킷 위에 BLINGONE이 아치형 투명 엠보로 새겨진 시안"><figcaption class="note" style="margin-top:8px">디지털 싱글 재킷 시안 · 귤이 가득 찬 CD, 'BLINGONE'만 투명한 엠보로</figcaption></figure>
+  </div>
+  <p class="note">노래는 방향을 보여 드리기 위한 가이드 데모입니다. 정식 음원은 작곡·작사가와 멤버 녹음으로 새로 만듭니다.</p>
+
+  <section id="challenge">
+    <div class="lbl"><b>01</b> · 챌린지</div>
+    <h2>따라 추다 보면 귤 하나를 다 먹는다</h2>
+    <p>손동작만 흉내 내는 챌린지가 아닙니다. 후렴 15초 동안 춤을 끝까지 따라 추면 귤 하나가 까지고, 한 조각이 입으로 들어갑니다. 가사 네 줄 끝마다 나오는 받는 소리 <b>'톡·쓱·똑·냠'</b>에 귤 동작을 하나씩 찍습니다. 영상이 끝나면 화면에 껍질 꽃과 노래진 손끝이 남습니다.</p>
+    <div class="feature"><video src="assets/dance_full.mp4" poster="assets/dance_full.jpg" controls playsinline preload="metadata" aria-label="후렴 15.7초에 맞춰 귤을 까서 먹는 챌린지 시안 영상"></video></div>
+    <p class="note" style="text-align:center">챌린지 시안 영상 · 소리 켜고 보세요 · 멤버 케시 얼굴로 만든 AI 동작 시안이며, 실제 원본 영상은 멤버가 직접 찍습니다.</p>
+
+    <h3>동작별로 나눠 보면</h3>
+    <div class="moves">
+      <figure><video src="assets/dance_1_tok.mp4" poster="assets/dance_1_tok.jpg" autoplay muted loop playsinline aria-label="귤을 카메라로 내밀고 꼭지를 누르는 동작"></video><div class="cue">톡!</div><figcaption>약속은 까먹고 · 귤을 카메라로 쭉 내밀고 꼭지를 꾹</figcaption></figure>
+      <figure><video src="assets/dance_2_sseuk.mp4" poster="assets/dance_2_sseuk.jpg" autoplay muted loop playsinline aria-label="껍질이 꽃처럼 열리는 동작"></video><div class="cue">쓱!</div><figcaption>귤은 잘 까먹고 · 껍질이 꽃처럼 활짝, '귤꽃'</figcaption></figure>
+      <figure><video src="assets/dance_3_ttok.mp4" poster="assets/dance_3_ttok.jpg" autoplay muted loop playsinline aria-label="한 조각 떼어 머리 위로 드는 동작"></video><div class="cue">똑!</div><figcaption>내 이름 까먹고 · 한 조각 떼서 머리 위로 팝</figcaption></figure>
+      <figure><video src="assets/dance_4_nyam.mp4" poster="assets/dance_4_nyam.jpg" autoplay muted loop playsinline aria-label="조각을 한 입에 먹는 동작"></video><div class="cue">냠!</div><figcaption>또 하나 까먹고 · 한 입, 볼 빵빵하게 정지</figcaption></figure>
+      <figure><video src="assets/dance_5_shrug.mp4" poster="assets/dance_5_shrug.jpg" autoplay muted loop playsinline aria-label="어깨 으쓱하고 카메라를 가리키는 동작"></video><div class="cue">으쓱 · 콕</div><figcaption>다 까먹어도 돼 / 나만 까먹지 마 · 어깨 으쓱, 카메라 콕, '안 돼 안 돼'</figcaption></figure>
+      <figure><video src="assets/dance_6_heart.mp4" poster="assets/dance_6_heart.jpg" autoplay muted loop playsinline aria-label="귤꽃을 볼 옆에 대고 윙크하며 손가락 하트"></video><div class="cue">♡</div><figcaption>Don't forget / 까먹지 마 · 손끝 반짝, 귤꽃 들고 윙크, 손가락 하트</figcaption></figure>
+    </div>
+
+    <h3>카운트 시트 (후렴 8마디, 126BPM)</h3>
+    <div class="tw"><table>
+      <thead><tr><th>마디</th><th>가사</th><th>1·2·3박 (춤)</th><th>4박 (포인트)</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>약속은 까먹고 (톡)</td><td>검지로 관자놀이 톡톡, 고개 갸웃, 무릎 바운스</td><td class="k">톡 · 귤 내밀고 꼭지 꾹</td></tr>
+        <tr><td>2</td><td>귤은 잘 까먹고 (쓱)</td><td>귤을 양손으로 받쳐 원 그리기, 상체 웨이브</td><td class="k">쓱 · 귤꽃 열기</td></tr>
+        <tr><td>3</td><td>내 이름 까먹고 (똑)</td><td>자기 가슴 가리키며 어깨 들썩, 삐진 표정</td><td class="k">똑 · 한 조각 떼서 머리 위로</td></tr>
+        <tr><td>4</td><td>또 하나 까먹고 (냠)</td><td>조각 든 손 좌우로 흔들며 옆 스텝</td><td class="k">냠 · 한 입, 볼빵빵</td></tr>
+        <tr><td>5</td><td>다 까먹어도 돼</td><td>양손 펴고 어깨 으쓱, 골반 좌우</td><td></td></tr>
+        <tr><td>6</td><td>나만 까먹지 마</td><td>카메라 콕 → 자기 가슴 → 검지 '안 돼 안 돼'</td><td></td></tr>
+        <tr><td>7</td><td>Don't forget, don't forget</td><td>노래진 손끝을 얼굴 옆에서 반짝반짝</td><td></td></tr>
+        <tr><td>8</td><td>까먹지 마</td><td>귤꽃을 볼 옆에 대고 윙크</td><td class="k">손가락 하트</td></tr>
+      </tbody>
+    </table></div>
+    <ul>
+      <li><b>비밀 장치 '귤꽃':</b> 촬영 전에 귤 윗부분 껍질에만 칼집을 6갈래 별 모양으로 넣어 두면, '쓱'에서 한 번에 꽃처럼 열립니다.</li>
+      <li><b>난이도 3단계:</b> Lv.1 귤 없이 동작만 · Lv.2 칼집 낸 귤꽃으로(정석) · Lv.3 칼집 없는 생귤로(실패 모음, 멤버 대결).</li>
+    </ul>
+  </section>
+
+  <section id="why">
+    <div class="lbl"><b>02</b> · 왜 퍼질 수 있나</div>
+    <h2>준비물은 귤 하나, 실패해도 콘텐츠</h2>
+    <div class="why">
+      <div><div class="n">상반신만</div><p>틱톡에서 손동작만 따라 하는 챌린지 영상이 3천만 회를 넘겼습니다. 전신 춤이 아니라 이불 속에 앉아서도 따라 합니다.</p></div>
+      <div><div class="n">실패가 재미</div><p>귤 껍질 한 번에 까기 실패 영상이 3천만 회입니다. 박자를 놓치거나 껍질이 안 열리는 장면이 그대로 2차 영상이 됩니다.</p></div>
+      <div><div class="n">검증된 소재</div><p>아이돌이 귤 까는 장면만 올린 영상이 490만 회였습니다. 블링원은 여기에 노래와 안무를 붙여 '우리 것'으로 만듭니다.</p></div>
+      <div><div class="n">겨울 = 귤</div><p>겨울이면 집집마다 귤이 있습니다. 따라 하는 데 돈과 시간이 들지 않고, 매년 겨울 다시 돌릴 수 있습니다.</p></div>
+      <div><div class="n">'저거 어떻게 해?'</div><p>한 번에 열리는 귤꽃이 댓글을 부르고, '귤꽃 까는 법' 영상이 따로 나옵니다.</p></div>
+      <div><div class="n">한·일 공통</div><p>일본에도 '코타츠에 귤'이라는 겨울 장면이 있습니다. 일본어판(みかん)으로 그대로 이어집니다.</p></div>
+    </div>
+    <p class="note">조회수는 2026년 11월 틱톡·인스타그램 해시태그 조사 기준입니다.</p>
+  </section>
+
+  <section id="music">
+    <div class="lbl"><b>03</b> · 작곡·작사 요청</div>
+    <h2>곡을 만드실 때 꼭 지켜 주실 두 가지</h2>
+    <div class="call">
+      <h3 style="margin-top:0">1. '톡 쓱 똑 냠'은 챌린지의 심장입니다</h3>
+      <ul>
+        <li>후렴 가사 네 줄 끝, 넷째 박마다 받는 소리 <b>(톡) (쓱) (똑) (냠)</b>이 또렷하게 들려야 합니다. 이 소리에 맞춰 귤 동작이 들어가기 때문에, 소리가 묻히면 챌린지가 성립하지 않습니다.</li>
+        <li>한 글자짜리 짧은 소리로, 리듬 위에 딱 떨어지게 넣어 주세요. 여러 사람이 외치는 구호 느낌이면 따라 하기 쉽습니다.</li>
+        <li>후렴 한 번이 15초 안팎(8마디)이면 틱톡·릴스 길이에 맞습니다. 가이드 데모는 126BPM입니다.</li>
+        <li>곡 첫머리(인트로)에도 '톡! 쓱! 똑! 냠! / 까먹지 마'를 넣어, 사운드를 틀자마자 챌린지가 시작되게 해 주세요.</li>
+        <li>구호만 따로 반복하는 구간(포스트 후렴)이 있으면 공연에서 관객과 같이 하기 좋습니다.</li>
+      </ul>
+    </div>
+    <div class="call">
+      <h3 style="margin-top:0">2. 주제 '까먹지 마'에서 벗어나지 않게</h3>
+      <ul>
+        <li>'까먹다'의 두 뜻을 함께 씁니다. <b>귤을 까서 먹는다</b>는 뜻과 <b>나를 잊지 마</b>라는 뜻입니다. 곡 제목, 챌린지 이름(#까먹지마챌린지), 굿즈, 성수 마켓 귤가게가 모두 이 한 문장으로 이어집니다.</li>
+        <li>가사의 장면은 '겨울밤 이불 속, 귤 한 봉지, 노래진 손끝'을 유지해 주세요. 귤 캠페인 전체(포토존, 귤즈 인형, 귤 농장, 일본 코타츠 편)가 이 장면 위에 서 있습니다.</li>
+        <li>후렴의 반복 구조 '약속은 까먹고 / 귤은 잘 까먹고 / 내 이름 까먹고 / 또 하나 까먹고 / 다 까먹어도 돼 / 나만 까먹지 마'는 안무와 맞물려 있어, 바꾸실 때 미리 알려 주시면 안무도 함께 고칩니다.</li>
+        <li>다른 걸그룹의 시트러스·레몬 콘셉트와 겹치지 않게, 오렌지가 아니라 '귤'이라는 단어를 그대로 씁니다. 외국 팬이 '귤'이라는 한국어를 배우게 됩니다.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="plan">
+    <div class="lbl"><b>04</b> · 단계별 실행 계획</div>
+    <h2>노래 먼저, 공연에서 첫 공개, 1월 발매</h2>
+    <div class="step"><div class="k">0<small>지금 ~ 12/11</small></div><div>
+      <h3>곡과 안무를 확정합니다</h3>
+      <ul class="todo">
+        <li>작곡·작사가에게 위 03의 요청과 가이드 데모를 전달하고, 후렴부터 먼저 받습니다.</li>
+        <li>후렴 데모 녹음(WKC 녹음실). 12/23에 공개하려면 <b>12/11(금)까지</b> 녹음을 마칩니다.</li>
+        <li>안무가가 카운트 시트를 다듬고, 멤버 한 명이 Lv.2로 먼저 해 보며 박자가 빡빡한 마디를 조정합니다.</li>
+        <li>재킷 시안 확정, 틱톡 사운드 이름 '까먹지 마 챌린지 - BLINGONE' 확정.</li>
+      </ul></div></div>
+    <div class="step"><div class="k">1<small>12/12 ~ 12/24</small></div><div>
+      <h3>연습하고, 성수 마켓에서 처음 보여 줍니다</h3>
+      <ul class="todo">
+        <li>멤버 연습: 사운드를 틀고 귤 없이 3번, 귤 들고 2번. 칼집 낸 귤꽃은 1인 10개 이상 준비.</li>
+        <li>티저 숏폼: '12월 23일 성수에서 귤 깝니다'.</li>
+        <li><b>12/23 저녁 성수 크리스마스 마켓 공연 끝에 후렴을 처음 공개</b>하고, 앞줄 관객과 같이 귤을 깝니다.</li>
+        <li>귤가게 옆 포토존을 챌린지 촬영 자리로 씁니다. 따라 하면 사진 한 장.</li>
+        <li>현장에서 멤버별 챌린지 원본과 실패 장면을 함께 찍어 둡니다.</li>
+      </ul></div></div>
+    <div class="step"><div class="k">2<small>12/25 ~ 1월</small></div><div>
+      <h3>발매와 함께 챌린지를 엽니다</h3>
+      <ul class="todo">
+        <li>음원과 뮤직비디오 공개. 같은 날 틱톡에 후렴을 오리지널 사운드로 올립니다.</li>
+        <li>게시 순서: 5명 버전(공식) → 멤버 개인 → 실패 모음 → 2명씩 대결(진 사람 벌칙). 2~3일 간격.</li>
+        <li>'귤꽃 까는 법' 짧은 영상, 듀엣·이어찍기 유도 문구.</li>
+        <li>외부 참여: 협업 크리에이터가 챌린지를 따라 하는 영상, 해외 크리에이터에게 귤 키트(귤 + 포토카드 + 사운드 링크).</li>
+        <li>화장품 출시·배송 상자를 귤 상자처럼 꾸며 같이 묶습니다.</li>
+      </ul></div></div>
+    <div class="step"><div class="k">3<small>2월 ~</small></div><div>
+      <h3>귤 시즌으로 키웁니다</h3>
+      <ul class="todo">
+        <li>제주 귤 농장 콘텐츠, 귤즈 인형·키링 굿즈.</li>
+        <li>일본 오디션 공지와 일본어판 '까먹지 마(みかん)'.</li>
+        <li>다음 겨울 '귤 시즌 2'로 매년 반복.</li>
+      </ul></div></div>
+  </section>
+
+  <section id="todo">
+    <div class="lbl"><b>05</b> · 할 일 정리</div>
+    <h2>누가, 언제까지</h2>
+    <div class="tw"><table>
+      <thead><tr><th>할 일</th><th>담당</th><th>언제까지</th></tr></thead>
+      <tbody>
+        <tr><td>다음 곡을 '까먹지 마'로 확정</td><td>WKC</td><td>11월 말</td></tr>
+        <tr><td>작곡·작사 의뢰(03의 요청 전달)</td><td>WKC · 브룩스</td><td>12월 첫 주</td></tr>
+        <tr><td>후렴 녹음</td><td>WKC · 멤버</td><td>12/11(금)</td></tr>
+        <tr><td>안무 다듬기·멤버 시범</td><td>안무가 · 멤버</td><td>12/11(금)</td></tr>
+        <tr><td>재킷·사운드 이름·게시 문구 확정</td><td>브룩스</td><td>12/11(금)</td></tr>
+        <tr><td>멤버 연습, 귤꽃 준비</td><td>멤버 · 브룩스</td><td>12/22(화)</td></tr>
+        <tr><td>성수 공연 첫 공개, 현장 촬영</td><td>WKC · 브룩스</td><td>12/23(수)</td></tr>
+        <tr><td>음원·뮤직비디오 발매, 챌린지 게시 시작</td><td>WKC · 브룩스</td><td>1월</td></tr>
+      </tbody>
+    </table></div>
+    <h3>먼저 정해 주실 것</h3>
+    <ul class="todo">
+      <li>'까먹지 마'를 다음 곡으로 확정할지</li>
+      <li>작곡·작사가와 안무가 (WKC 쪽 또는 외부)</li>
+      <li>챌린지를 올릴 공식 틱톡 계정과 운영 주체</li>
+      <li>멤버 얼굴이 들어가는 시안·굿즈 사용 범위</li>
+    </ul>
+  </section>
+
+  <footer>BLINGONE × 귤 · 까먹지 마 캠페인 제안 · 2026-11-23 · 영상은 AI 동작 시안, 노래는 가이드 데모입니다.</footer>
+</div>
+</body>
+</html>
